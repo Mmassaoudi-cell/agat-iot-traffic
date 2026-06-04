@@ -4,7 +4,7 @@
 > Mohamed Massaoudi, Maymouna Ez Eddin, Katherine R. Davis  
 > Texas A&M University / Tarleton State University  
 > IECON 2026
-
+![The AGAT Architecture](AGAT.png)
 ---
 
 ## Overview
