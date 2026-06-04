@@ -11,17 +11,6 @@
 
 This repository provides the **AGAT Hybrid CE** implementation from the paper above — a framework that integrates momentum-smoothed, L1-normalised attribution guidance directly into the adversarial training loop, concentrating adversarial pressure on the most discriminative IoT flow features while respecting a threat-model-aware perturbability mask.
 
-### Key results on RT-IoT2022 (seed 42, 30 epochs, RTX 5090)
-
-| Method | Clean | FGSM | PGD-10 | BI-PGD | F1 | AUC |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| Standard DNN | 99.1% | 89.5% | 88.6% | 94.5% | 0.991 | 1.000 |
-| Adv. DNN (FGSM) | 99.1% | 96.5% | 94.4% | 97.2% | 0.990 | 0.999 |
-| Adv. DNN (PGD-10) | 98.7% | 96.3% | 96.6% | 97.4% | 0.987 | 0.999 |
-| **AGAT Hybrid CE** | **99.0%** | 95.2% | 96.2% | **98.0%** | **0.989** | **0.999** |
-| AGAT-TRADES | 98.6% | 92.5% | 93.3% | 96.0% | 0.986 | 0.999 |
-| Hybrid-TRADES | 98.5% | 96.0% | 96.3% | 97.3% | 0.984 | 0.998 |
-| Random-TRADES (ablation) | 98.6% | 93.5% | 94.0% | 95.1% | 0.985 | 0.999 |
 
 **BI-PGD** is the primary stress-test metric: it initialises PGD from the worst-case boundary of the feasible set, bypassing gradient masking. AGAT Hybrid CE achieves the highest BI-PGD accuracy (98.0%) across all methods.
 
